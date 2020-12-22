@@ -1,3 +1,3 @@
-module github.com/yue-qiu/go-WebSocket
+module github.com/yue-qiu/webSocket-demo
 
 go 1.15

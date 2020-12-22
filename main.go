@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/yue-qiu/go-WebSocket/src"
+	"github.com/yue-qiu/webSocket-demo/src"
 	"log"
 	"net"
 )

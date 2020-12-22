@@ -1,7 +1,6 @@
 package src
 
 import (
-	"fmt"
 	"log"
 	"net"
 )
@@ -30,7 +29,7 @@ func (w *WSocket) Read() (data []byte, err error) {
 	RSV2 := (flagByte[0] >> 5) & 1
 	RSV3 := (flagByte[0] >> 4) & 1
 	opcode := flagByte[0] & 15
-	fmt.Printf("FIN: %v, RSV1: %v, RSV2: %v, RSV3: %v, opcode: %x\n", FIN, RSV1, RSV2, RSV3, opcode)
+	log.Printf("FIN: %v, RSV1: %v, RSV2: %v, RSV3: %v, opcode: %x\n", FIN, RSV1, RSV2, RSV3, opcode)
 
 	payloadLenByte := make([]byte, 1)
 	_, err = w.Conn.Read(payloadLenByte)

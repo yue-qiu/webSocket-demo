@@ -62,7 +62,8 @@ func HandleWSocketConn(conn net.Conn) {
 
 		log.Printf("Read data from wSocket: %v\n", string(data))
 
-		wSocket.Write([]byte(fmt.Sprintf("%500v\n", "hello")))
+		// 发送响应消息
+		wSocket.Write([]byte(fmt.Sprintf("%500v\n", "hello world")))
 		log.Println("send data")
 	}
 }
